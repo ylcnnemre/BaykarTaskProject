@@ -1,0 +1,19 @@
+.container{
+  background-image: url("../public/images/bg2.png");
+  background-color: #0A142F;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  position: relative;
+}
+
+.header_grid{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/headergrid.png");
+  z-index: 10000;
+  width: 300px;
+  height: 300px;
+}
