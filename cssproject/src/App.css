@@ -1,10 +1,10 @@
-.container{
+.app_container{
   background-image: url("../public/images/bg2.png");
   background-color: #0A142F;
-  height: 100vh;
+  height: max-content;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 

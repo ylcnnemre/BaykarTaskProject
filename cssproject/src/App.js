@@ -1,22 +1,21 @@
-import React from 'react'
-import "./App.css"
+import React from "react";
+import "./App.css";
+import AboutUs from "./components/AboutUs";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import StarGrid from "./components/StarGrid";
 const App = () => {
   return (
-    <h2 className='text-red-700'>
-      asdadasd
-    </h2>
-   /*  <div  className="container" >
+    <div className="app_container flex flex-col">
+      <img src="/images/headergrid.png" alt="" className="absolute" />
+      <Header />
+      <HeroSection /> 
+      <AboutUs />
+    {/*   <div className="w-[300px]">
+          <img src="/images/hero_image1.png" alt="" />
+      </div> */}
+    </div>
+  );
+};
 
-
-      <img src="/images/headergrid.png" alt="" style={{position:"absolute"}} />
-      <div className='header'>
-          <img src="/images/logo.png" alt="" />
-      </div>
-      <h1 className='bg-red-500'>
-        asdasdasdasd
-      </h1>
-    </div> */
-  )
-}
-
-export default App
+export default App;
