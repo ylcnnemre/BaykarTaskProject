@@ -27,9 +27,6 @@ const App = () => {
       <Blog/>
       <Categories/>
       <Footer/>
-    {/*   <div className="w-[300px]">
-          <img src="/images/hero_image1.png" alt="" />
-      </div> */}
     </div>
   );
 };
