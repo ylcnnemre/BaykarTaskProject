@@ -2,7 +2,9 @@ import React from "react";
 import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Blog from "./components/Blog";
+import Categories from "./components/Categories";
 import FanFact from "./components/FanFact";
+import Footer from "./components/Footer";
 import HappyClients from "./components/HappyClients";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -23,6 +25,8 @@ const App = () => {
       <OurProjects/>
       <HappyClients/>
       <Blog/>
+      <Categories/>
+      <Footer/>
     {/*   <div className="w-[300px]">
           <img src="/images/hero_image1.png" alt="" />
       </div> */}
