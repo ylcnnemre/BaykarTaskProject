@@ -1,26 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
 
-function App() {
+const App = () => {
+  const [result, setResult] = useState<Array<{ name: string; count: number }>>(
+    []
+  );
+
+  const cities: string[] = [
+    "istanbul",
+    "ankara",
+    "izmir",
+    "istanbul",
+    "ankara",
+  ];
+
+  useEffect(() => {
+    /* cities.forEach(item =>{
+
+         let data=result.map<{name:string,count:number}>((el,index) => {
+
+              
+              if(el.name===item)
+              {
+                 return {
+                   name : item,
+                   count : el.count  + 1
+                 }
+
+              }
+              else{
+                 return {
+                  name : item,
+                  count : 1
+                 }
+              }
+
+          } )
+
+          setResult([...data])
+     }) */
+
+    let data = [...result];
+
+    cities.map((el) => {
+      let index = data.findIndex((item) => item.name === el);
+
+      if (index === -1) {
+        data.push({
+          name: el,
+          count: 1,
+        });
+      } else {
+        data[index] = {
+          count: data[index].count + 1,
+          name: el,
+        };
+      }
+    });
+
+    setResult(data);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {result.map((item) => (
+        <>
+          <p> {item.name} </p>
+          <p>{item.count}</p>
+        </>
+      ))}
     </div>
   );
-}
+};
 
 export default App;
