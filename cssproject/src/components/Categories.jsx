@@ -37,7 +37,7 @@ const Categories = () => {
   ];
 
   return (
-    <section className="flex flex-col px-[170px] pb-[100px] ">
+    <section className="flex flex-col px-[170px] pb-[100px] sm:hidden ">
       <h1 className="text-5xl font-bold mb-[60px]  text-white leading-[58px]">
         Categories
       </h1>
