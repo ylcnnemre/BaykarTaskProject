@@ -10,7 +10,7 @@ const Footer = () => {
           </h5>
           <p className="text-[#0A142F] flex justify-between py-[15px] border-b border-[#0A142F]  ">
             youremail@gmail.com
-            <span className="font-bold"> > </span>
+            <span className="font-bold"> {">"} </span>
           </p>
           <img
             src="/images/dots.png"
