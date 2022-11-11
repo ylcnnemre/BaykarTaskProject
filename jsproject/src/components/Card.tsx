@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState,useContext } from "react";
 
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -13,6 +13,7 @@ import {MoreVertOutlined} from "@mui/icons-material"
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useNavigate} from "react-router-dom"
+import { MainContext } from "../App";
 
 const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
   const currency = useMemo(() => {
@@ -20,10 +21,11 @@ const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
     return veri;
   }, [data]);
 
-  const [favorite,setFavorite]=useState<boolean>(false)
+
 
 
   const navigate=useNavigate()
+
 
 
   
@@ -36,14 +38,14 @@ const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
           </Avatar>
         }
         title={data.name.common}
-        action={
-            <IconButton aria-label="settings" onClick={()=>setFavorite(!favorite)} >
+      /*   action={
+            <IconButton aria-label="settings" onClickCapture={()=>{editFavoriteData()} }  >
                 {
                     !favorite ? <FavoriteBorderIcon />  : <FavoriteIcon color={"error"}  />
                 }
               
             </IconButton>
-          }
+          } */
         subheader={data.continents[0]}
         
       />

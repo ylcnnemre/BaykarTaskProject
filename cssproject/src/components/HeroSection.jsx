@@ -53,7 +53,6 @@ const HeroSection = () => {
           </button>
           <div
             className="flex flex-col mt-[26px] self-end mr-[176px]  cursor-pointer"
-            onClick={() => console.log("asdads")}
           >
             <p
               style={{ writingMode: "vertical-lr" }}

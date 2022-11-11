@@ -18,7 +18,6 @@ const CountryDetail = () => {
     fetch(`https://restcountries.com/v3.1/name/${params.name}`)
       .then((res) => res.json())
       .then((val) => {
-        console.log("vall ==>", val);
         setCountryInfo(val[0]);
       });
   }, []);
