@@ -24,9 +24,9 @@ const Header = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center pt-[35px] pl-[150px] pr-[153px]  ">
+    <div className="flex justify-between items-center pt-[35px] pl-[150px] pr-[153px] sm:px-6  ">
       <img src="/images/logo.png" alt="" />
-      <ul className="flex items-center">
+      <ul className="flex items-center sm:hidden  ">
         {links.map((item) => {
           return (
             <li

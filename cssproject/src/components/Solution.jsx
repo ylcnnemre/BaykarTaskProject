@@ -18,7 +18,7 @@ const Solution = () => {
 
   return (
     <div className="grid grid-cols-5  z-50  ">
-      <div className="bg-[#FFC93E] pt-[100px] pb-[80px] col-span-2 -z-10 ">
+      <div className="bg-[#FFC93E] pt-[100px] pb-[80px] col-span-2 -z-10 sm:hidden  ">
         <div className="relative translate-x-[120px] ">
           <img src="/images/solution_1.png" className="z-40 " alt="" />
           <img
@@ -28,8 +28,8 @@ const Solution = () => {
           />
         </div>
       </div>
-      <div className="bg-[#353F5B] col-span-3 pl-[200px]  pr-[110px] -z-40 py-[100px]  ">
-        <h1 className="text-5xl font-bold leading-[58.09px] text-[#FFFFFF] ">
+      <div className="bg-[#353F5B] col-span-3 pl-[200px]  pr-[110px] -z-40 py-[100px] sm:col-span-5 sm:pr-10  sm:pl-5 sm:bg-transparent sm:py-10 ">
+        <h1 className="text-5xl font-bold leading-[58.09px] text-[#FFFFFF] sm:text-2xl ">
           Our Solution Approach
         </h1>
         {solutionData.map((item) => {
@@ -41,7 +41,7 @@ const Solution = () => {
                 className="object-contain self-start "
               />
               <div className="flex flex-col ml-[22px] ">
-                <h3 className="font-bold text-2xl text-white ">
+                <h3 className="font-bold text-[20px] text-white ">
                   {item.title}
                 </h3>
                 <p className="text-[#E0E5F3] leading-[30px] mt-[18px] ">
@@ -53,6 +53,9 @@ const Solution = () => {
             </div>
           );
         })}
+      </div>
+      <div className="bg-[#FFC93E] w-screen px-7 mt-[100px] hidden sm:block " >
+          <img src="/images/solution_1.png" alt="" className="w-full sm:-translate-y-14   " />
       </div>
     </div>
   );

@@ -8,12 +8,9 @@ import CardContent from "@mui/material/CardContent";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import { IconButton } from "@mui/material";
-import {MoreVertOutlined} from "@mui/icons-material"
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+
 import {useNavigate} from "react-router-dom"
-import { MainContext } from "../App";
+
 
 const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
   const currency = useMemo(() => {
@@ -38,14 +35,7 @@ const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
           </Avatar>
         }
         title={data.name.common}
-      /*   action={
-            <IconButton aria-label="settings" onClickCapture={()=>{editFavoriteData()} }  >
-                {
-                    !favorite ? <FavoriteBorderIcon />  : <FavoriteIcon color={"error"}  />
-                }
-              
-            </IconButton>
-          } */
+
         subheader={data.continents[0]}
         
       />

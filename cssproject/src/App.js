@@ -14,7 +14,7 @@ import Solution from "./components/Solution";
 import StarGrid from "./components/StarGrid";
 const App = () => {
   return (
-    <div className="app_container flex flex-col">
+    <div className="app_container flex flex-col sm:overflow-x-hidden   ">
       <img src="/images/headergrid.png" alt="" className="absolute" />
       <Header />
       <HeroSection /> 

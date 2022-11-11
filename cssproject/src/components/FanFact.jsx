@@ -21,10 +21,10 @@ const FanFact = () => {
   ];
 
   return (
-    <section className="py-32 px-[237px] flex  ">
+    <section className="py-32 px-[237px] flex sm:px-0 sm:flex-col sm:pb-20  ">
       {factData.map((el, index) => {
         return (
-          <div key={index} className={[`flex flex-col items-center ${index == factData.length-1 ? "0" : "mr-[113px]"  } `]}>
+          <div key={index} className={[`flex flex-col items-center ${index == factData.length-1 ? "0" : "mr-[113px]"  } sm:mr-0 sm:my-6 `]}>
             <h3 className="text-[48px] font-bold leading-[58px] text-[#FFFFFF]  ">{el.data}</h3>
             <p  className="text-[#E0E5F3] text-[20px] " >{el.desc}</p>
           </div>
