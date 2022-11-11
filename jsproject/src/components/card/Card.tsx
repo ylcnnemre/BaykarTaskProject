@@ -12,6 +12,7 @@ import { IconButton } from "@mui/material";
 import {MoreVertOutlined} from "@mui/icons-material"
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import {useNavigate} from "react-router-dom"
 
 const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
   const currency = useMemo(() => {
@@ -21,8 +22,13 @@ const CountryCard: React.FC<{ data?: any }> = ({ data }) => {
 
   const [favorite,setFavorite]=useState<boolean>(false)
 
+
+  const navigate=useNavigate()
+
+
+  
   return (
-    <Card sx={{ width: "90%" }}>
+    <Card sx={{ width: "90%",cursor:"pointer" }} onClick={()=>navigate(`/country/${data.name.common}`)}  >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
